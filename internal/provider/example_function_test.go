@@ -22,7 +22,7 @@ func TestExampleFunction_Known(t *testing.T) {
 			{
 				Config: `
 				output "test" {
-					value = provider::scaffolding::example("testvalue")
+					value = provider::tunnel::example("testvalue")
 				}
 				`,
 				Check: resource.ComposeAggregateTestCheckFunc(
@@ -43,7 +43,7 @@ func TestExampleFunction_Null(t *testing.T) {
 			{
 				Config: `
 				output "test" {
-					value = provider::scaffolding::example(null)
+					value = provider::tunnel::example(null)
 				}
 				`,
 				// The parameter does not enable AllowNullValue
@@ -65,9 +65,9 @@ func TestExampleFunction_Unknown(t *testing.T) {
 				resource "terraform_data" "test" {
 					input = "testvalue"
 				}
-				
+
 				output "test" {
-					value = provider::scaffolding::example(terraform_data.test.output)
+					value = provider::tunnel::example(terraform_data.test.output)
 				}
 				`,
 				Check: resource.ComposeAggregateTestCheckFunc(

@@ -1,3 +1,3 @@
-provider "scaffolding" {
+provider "tunnel" {
   # example configuration here
 }

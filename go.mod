@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-scaffolding-framework
+module github.com/granito-source/terraform-provider-tunnel
 
 go 1.21
 
